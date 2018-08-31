@@ -29,63 +29,16 @@ import rosegraphics as rg
 ###############################################################################
 window = rg.TurtleWindow()
 
-lenin = rg.SimpleTurtle('circle')
-stalin = rg.SimpleTurtle('square')
-putin = rg.SimpleTurtle('triangle')
-mao = rg.SimpleTurtle('circle')
+stalin = rg.SimpleTurtle('circle')
+stalin.pen = rg.Pen('red', 3)
+stalin.speed = 5
+size = 30
 
-lenin.pen = rg.Pen('white', 1)
-stalin.pen = rg.Pen('white', 1)
-
-lenin.backward(300)
-lenin.left(90)
-lenin.forward(100)
-lenin.pen = rg.Pen('red', 3)
-lenin.backward(200)
-lenin.forward(100)
-lenin.right(90)
-lenin.forward(100)
-lenin.left(90)
-lenin.forward(100)
-lenin.backward(200)
-
-stalin.backward(150)
-stalin.left(90)
-stalin.forward(100)
-stalin.pen = rg.Pen('blue', 3)
-stalin.backward(200)
-stalin.forward(200)
-stalin.right(90)
-stalin.forward(100)
-stalin.backward(100)
-stalin.right(90)
-stalin.forward(100)
-stalin.left(90)
-stalin.forward(75)
-stalin.backward(75)
-stalin.right(90)
-stalin.forward(100)
-stalin.left(90)
-stalin.forward(100)
-
-putin.pen = rg.Pen('yellow', 3)
-putin.left(90)
-putin.forward(100)
-putin.backward(200)
-putin.right(90)
-putin.forward(100)
-
-mao.pen = rg.Pen('white', 0)
-mao.forward(150)
-mao.right(90)
-mao.forward(100)
-mao.pen = rg.Pen('green', 3)
-mao.backward(200)
-mao.left(90)
-mao.forward(100)
-mao.right(90)
-mao.forward(100)
-mao.right(90)
-mao.forward(100)
+for k in range(10):
+    stalin.draw_circle(size)
+    stalin.speed = 9999
+    stalin.left(30)
+    stalin.speed = 5
+    size = size + 20
 
 window.close_on_mouse_click()
